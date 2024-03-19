@@ -14,15 +14,13 @@ return {
     -- Creates a beautiful debugger UI
     'rcarriga/nvim-dap-ui',
 
-    -- Required dependency for nvim-dap-ui
-    'nvim-neotest/nvim-nio',
-
     -- Installs the debug adapters for you
     'williamboman/mason.nvim',
     'jay-babu/mason-nvim-dap.nvim',
 
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
+    'vadimcn/vscode-lldb',
   },
   config = function()
     local dap = require 'dap'
@@ -50,6 +48,8 @@ return {
     vim.keymap.set('n', '<F1>', dap.step_into, { desc = 'Debug: Step Into' })
     vim.keymap.set('n', '<F2>', dap.step_over, { desc = 'Debug: Step Over' })
     vim.keymap.set('n', '<F3>', dap.step_out, { desc = 'Debug: Step Out' })
+    vim.keymap.set('n', '<F17>', dap.terminate, { desc = 'Debug: Terminate' }) -- Shift+F5
+    vim.keymap.set('n', '<F29>', dap.restart, { desc = 'Debug: Restart' }) -- Control+F5
     vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint, { desc = 'Debug: Toggle Breakpoint' })
     vim.keymap.set('n', '<leader>B', function()
       dap.set_breakpoint(vim.fn.input 'Breakpoint condition: ')
