@@ -5,3 +5,7 @@ nvim
 
 spell/
 lazy-lock.json
+lua/custom/.DS_Store
+lua/kickstart/.DS_Store
+lua/.DS_Store
+.DS_Store
