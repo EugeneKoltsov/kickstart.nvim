@@ -87,5 +87,8 @@ return {
 
     -- Install golang specific config
     require('dap-go').setup()
+
+    -- Evgeny Koltsov
+    require('dap.ext.vscode').load_launchjs()
   end,
 }
