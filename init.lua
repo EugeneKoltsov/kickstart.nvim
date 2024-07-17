@@ -730,17 +730,29 @@ require('lazy').setup({
       }
     end,
   },
-
+  {
+    'rose-pine/neovim',
+  },
+  {
+    'rebelot/kanagawa.nvim',
+  },
+  {
+    'catppuccin/nvim',
+  },
+  {
+    'briones-gabriel/darcula-solid.nvim',
+  },
+  {
+    'savq/melange-nvim',
+  },
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
 
-    -- 'folke/tokyonight.nvim',
-    'rose-pine/neovim',
-    -- 'savq/melange-nvim',
-    -- 'briones-gabriel/darcula-solid.nvim',
+    'folke/tokyonight.nvim',
+    -- 'rose-pine/neovim',
     priority = 1000, -- make sure to load this before all the other start plugins
     init = function()
       -- Load the colorscheme here.
@@ -750,12 +762,13 @@ require('lazy').setup({
       vim.cmd.colorscheme 'rose-pine'
       -- vim.cmd.colorscheme 'melange'
       -- vim.cmd.colorscheme 'darcula-solid'
+      -- vim.cmd.colorscheme 'kanagawa'
+      -- vim.cmd.colorscheme 'catppuccin'
 
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
