@@ -90,11 +90,12 @@ return {
       end)
 
       vim.keymap.set('n', '<F1>', dap.continue)
-      vim.keymap.set('n', '<F2>', dap.step_into)
-      vim.keymap.set('n', '<F3>', dap.step_over)
+      vim.keymap.set('n', '<F2>', dap.step_over)
+      vim.keymap.set('n', '<F3>', dap.step_into)
       vim.keymap.set('n', '<F4>', dap.step_out)
       vim.keymap.set('n', '<F5>', dap.step_back)
       vim.keymap.set('n', '<F13>', dap.restart)
+      vim.keymap.set('n', '<F9>', dap.toggle_breakpoint)
 
       dap.listeners.before.attach.dapui_config = function()
         ui.open()
